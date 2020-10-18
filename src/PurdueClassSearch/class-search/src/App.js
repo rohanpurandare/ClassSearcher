@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, validated} from "react";
 import { Col, Form, Button, Dropdown } from "react-bootstrap";
 import "./App.css";
 
@@ -19,7 +19,11 @@ function App() {
                 <h1 className="message">Welcome</h1>
             </div>
             <div className="bottom-block">
-                <Form>
+                <Form
+                id="responses"
+                noValidate
+                validated={validated}
+                onSubmit={handleSubmit}>
                     <Form.Row>
                         <Form.Group as={Col} controlId="validationCustom01">
                             <Form.Label>Major</Form.Label>
