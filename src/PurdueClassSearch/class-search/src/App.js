@@ -10,7 +10,7 @@ function App() {
     const handleSubmit = (e) => {
         const form = e.currentTarget;
         e.preventDefault();
-        console.log(major);
+        console.log(major, minor);
     }
 
     return (
@@ -45,7 +45,7 @@ function App() {
                             />
                         </Form.Group>
                     </Form.Row>
-                    <Button type="submit">Get results</Button>
+                    <Button variant="light" className="myButton" type="submit">Get results</Button>
                 </Form>
 
             </div>
